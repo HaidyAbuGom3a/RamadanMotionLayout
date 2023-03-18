@@ -1,18 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/helal"
+        android:layout_width="@dimen/moon_dimes"
+        android:layout_height="@dimen/moon_dimes"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:background="@drawable/helal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/moon"
+        android:layout_width="@dimen/moon_dimes"
+        android:layout_height="@dimen/moon_dimes"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:background="@drawable/moon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/man"
+        android:layout_width="@dimen/man_width"
+        android:layout_height="@dimen/man_height"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:background="@drawable/man"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_ramadan"
+        android:background="@drawable/ramadan_screen_bg"
+        android:alpha="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/zeena"
+            app:layout_constraintStart_toStartOf="@id/constraint_layout_ramadan"
+            app:layout_constraintEnd_toEndOf="@id/constraint_layout_ramadan"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:textSize="@dimen/text_large"
+            android:textColor="@color/black"
+            android:text="Ramadan Kareem"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/zeena"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/constraint_layout_ramadan"
+            app:layout_constraintEnd_toEndOf="@id/constraint_layout_ramadan"
+            android:layout_width="@dimen/zeena_width"
+            android:layout_height="@dimen/zeena_height"
+            app:lottie_rawRes="@raw/zeena_ramadan"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/muslim_animation"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintStart_toStartOf="@id/constraint_layout_ramadan"
+            app:layout_constraintEnd_toEndOf="@id/constraint_layout_ramadan"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:layout_width="@dimen/animation_dimens"
+            android:layout_height="@dimen/animation_dimens"
+            app:lottie_rawRes="@raw/muslim_ramadan"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/muslim_animation"
+            app:layout_constraintEnd_toEndOf="@id/muslim_animation"
+            app:layout_constraintTop_toBottomOf="@id/muslim_animation"
+            android:textSize="@dimen/text_regular"
+            android:layout_marginStart="@dimen/margin_regular"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/ramadan_message"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
