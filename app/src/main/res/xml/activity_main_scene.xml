@@ -6,7 +6,7 @@
     <Transition
         motion:constraintSetEnd="@+id/mid"
         motion:constraintSetStart="@id/start"
-        motion:duration="7000"
+        motion:duration="5000"
         motion:autoTransition="animateToEnd">
        <KeyFrameSet>
            <KeyAttribute
@@ -88,7 +88,6 @@
     <Transition
         motion:constraintSetStart="@+id/mid"
         motion:constraintSetEnd="@+id/end"
-        motion:autoTransition="animateToEnd"
         motion:duration="1000"
         >
         <OnClick motion:targetId="@+id/helal" />
