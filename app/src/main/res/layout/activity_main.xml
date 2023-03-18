@@ -40,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ramadan_kareem"
+        android:id="@+id/constraint_layout_ramadan"
         android:background="@drawable/ramadan_screen_bg"
         android:alpha="1"
         android:layout_width="match_parent"
@@ -53,8 +53,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/zeena"
-            app:layout_constraintStart_toStartOf="@id/ramadan_kareem"
-            app:layout_constraintEnd_toEndOf="@id/ramadan_kareem"
+            app:layout_constraintStart_toStartOf="@id/constraint_layout_ramadan"
+            app:layout_constraintEnd_toEndOf="@id/constraint_layout_ramadan"
             android:fontFamily="@font/poppins_medium"
             android:layout_marginTop="@dimen/margin_regular"
             android:textSize="@dimen/text_large"
@@ -64,8 +64,8 @@
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/zeena"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="@id/ramadan_kareem"
-            app:layout_constraintEnd_toEndOf="@id/ramadan_kareem"
+            app:layout_constraintStart_toStartOf="@id/constraint_layout_ramadan"
+            app:layout_constraintEnd_toEndOf="@id/constraint_layout_ramadan"
             android:layout_width="@dimen/zeena_width"
             android:layout_height="@dimen/zeena_height"
             app:lottie_rawRes="@raw/zeena_ramadan"
@@ -76,8 +76,8 @@
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/muslim_animation"
             app:layout_constraintTop_toBottomOf="@id/header"
-            app:layout_constraintStart_toStartOf="@id/ramadan_kareem"
-            app:layout_constraintEnd_toEndOf="@id/ramadan_kareem"
+            app:layout_constraintStart_toStartOf="@id/constraint_layout_ramadan"
+            app:layout_constraintEnd_toEndOf="@id/constraint_layout_ramadan"
             android:layout_marginTop="@dimen/margin_regular"
             android:layout_width="@dimen/animation_dimens"
             android:layout_height="@dimen/animation_dimens"
